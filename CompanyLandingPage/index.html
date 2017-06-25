@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- sidebar for mobile. needs to be direct child of body -->
+    <div class="ui left icon sidebar inverted vertical menu labeled">
+      <a class="item"><i class="home icon"></i>Home</a>
+      <a class="item"><i class="block layout icon"></i>Customers</a>
+      <a class="item" href="/pricing.html"><i class="search icon"></i>Pricing</a>
+    </div>
+
+    <!-- pusher class for mobile sidebar. all our content needs to be wrapped in this-->
+    <div class="pusher">
+
+      <!-- computer/tablet menu -->
+      <div class="ui computer tablet only grid">
+        <div class="column">
+          <div class="ui basic segment">
+            <div class="ui secondary demo borderless menu fluid">
+              <div class="ui container">
+                <a class="ui header item" href="/">Startupify</a>
+                <div class="right menu">
+                  <a class="item" href="#">Who We Are</a>
+                  <a class="item" href="#">Customers</a>
+                  <a class="item" href="./pricing.html">Pricing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="ui mobile only grid">
+        <div class="ui icon borderless menu fixed">
+          <div class="item" id="left-sidebar-toggle">
+            <i class="block layout icon large"></i>
+          </div>
+        </div>
+      </div>
+      <!-- heading background image -->
+      <div class="ui vertical segment masthead" id="animate-header-image"></div>
+
+      <!-- 3 icons segment -->
+      <div class="ui basic segment" id="animate-icons"><br>
+        <div class="ui vertical basic container three column grid stackable">
+          <div class="demo column">
+            <h2 class="ui icon header">
+              <i class="idea demo icon" ></i>
+              <div class="content">
+                Brainstorm
+                <div class="sub header">Let's brainstorm together and help build your product.</div>
+              </div>
+            </h2>
+          </div>
+          <div class="column">
+            <div class="ui container">
+              <h2 class="ui icon header">
+                <i class="find icon"></i>
+                <div class="content">
+                  Discover
+                  <div class="sub header">Find and master new techniques to grow as an entrepreneur.</div>
+                </div>
+              </h2>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui container">
+              <h2 class="ui icon header">
+                <i class="sitemap icon"></i>
+                <div class="content">
+                  Strcture
+                  <div class="sub header">Structure your team and product for optimal results.</div>
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div><br>
+
+      <!-- modal popup -->
+      <div class="ui modal">
+        <div class="ui very padded segment container">
+          <form class="ui form">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" name="first-name" placeholder="First Name">
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="text" name="email" placeholder="Email">
+            </div>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" tabindex="0" class="hidden">
+                <label>I agree to the Terms and Conditions</label>
+              </div>
+            </div>
+            <button class="ui button" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- modal button -->
+      <div class="ui grid container center aligned">
+        <div class="six wide column">
+          <div class="ui large inverted green fluid button" id="modal-button">
+            Get Started
+          </div>
+        </div>
+      </div><br><br>
+
+      <div class="ui clearing divider"></div>
+
+      <!-- Company pitch -->
+      <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="eight wide column">
+              <h3 class="ui header">We Help Companies and Companions</h3>
+              <p>We do amazing things that other compnays don't do. We also are great companions. We are amazing. Buy our stuff</p>
+              <div class="ui clearing divider hidden"></div>
+              <h3 class="ui header">Do more for yourself</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            <div class="six wide right floated column">
+              <img src="images/machine.gif" class="ui demo2 large bordered rounded image" id="animate-second-image">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials grid break -->
+      <div class="ui vertical stripe quote segment">
+        <div class="ui equal width stackable internally celled grid">
+          <div class="center aligned row">
+            <div class="column">
+              <h3>"What a Great Company"</h3>
+              <p>-Super Prestigious Publication</p>
+            </div>
+            <div class="demo column" id="animate-gif">
+              <h3>"I shouldn't have gone with their competitor."</h3>
+              <p>
+                <img src="images/man.png" class="ui demo2 avatar image"> <b>John</b> Chief Technology Officer, Tech inc.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- last CTA's and information -->
+      <div class="ui vertical stripe segment center aligned grid">
+        <div class="ui text container">
+          <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+          <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+          <div class="ui large button">Read More</div>
+          <h4 class="ui horizontal header divider">
+            <a href="#">Case Studies</a>
+          </h4>
+          <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+          <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+          <a class="ui centered large button">I'm Still Quite Interested</a>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="ui inverted very padded vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">About</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Home</a>
+                <a href="#" class="item">Contact Us</a>
+                <a href="#" class="item">Terms of Service</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Services</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Developers</a>
+              </div>
+            </div>
+            <div class="seven wide centered column">
+              <h4 class="ui inverted header">Keep up to date with our company</h4>
+              <div class="ui form">
+                <div class="field">
+                  <input class="ui fluid input" type="text" name="" value="" placeholder="Enter your email...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function(e) {
+        $('#animate-icons').transition({
+          debug     : true,
+          animation : 'fade down in',
+          duration  : 2000
+        });
+        $('#animate-header-image').transition({
+          debug     : true,
+          animation : 'fade in',
+          duration  : 2000
+        });
+        $('.demo2.image').visibility({
+          onTopVisible: function(calculations) {
+            $('#animate-second-image').transition({
+             debug     : true,
+             animation : 'fade in',
+             duration  : 3000,
+             once: true
+            });
+          }
+        });
+        $('.demo.column').visibility({
+          onBottomVisible: function(calculations) {
+            $('#animate-gif').transition({
+             debug     : true,
+             animation : 'flash',
+             duration  : 2000
+            });
+          }
+        });
+        $('#modal-button').on('click', function() {
+          $('.ui.modal').modal('show');
+        });
+
+        $('.ui.left.sidebar').sidebar('attach events', '#left-sidebar-toggle', 'show');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+
+
+body {
+  background-color: #eee!important;
+}
+
+.segment {
+  background-color: #fff!important;
+}
+
+.segment .feed:hover {
+  background: #eee!important;
+  cursor: pointer;
+}

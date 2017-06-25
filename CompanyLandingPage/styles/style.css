@@ -1,0 +1,33 @@
+.segment.masthead {
+  background: url("../images/mastheadbg.jpeg") no-repeat center center fixed!important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 35rem;
+}
+
+.ui.menu {
+  margin: 0px!important;
+  z-index: 100;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
