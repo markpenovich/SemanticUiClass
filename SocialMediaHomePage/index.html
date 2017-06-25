@@ -9,16 +9,15 @@
     <title></title>
   </head>
   <body>
-    <div class="ui blue progress top attached" data-percent="99" id="example1">
-      <div class="bar"></div>
-    </div>
     <!-- a wrapper to give our content margin and animate -->
-    <div class="ui text container blue segment" style="margin-top: 3em;" id="animate">
+    <div class="ui text container segment" style="margin-top: 3em;" id="animate">
 
-      <div class="ui pointing fixed menu">
+      <div class="ui fixed menu">
         <div class="ui text container">
-          <a class="item active blue" href="/stream">Stream</a>
-          <a class="item" href="./followers.html">Followers</a>
+          <div class="ui secondary pointing menu">
+            <a class="item active blue" href="./index.html">Home</a>
+            <a class="item" href="./followers.html">Followers</a>
+          </div>
         </div>
       </div>
 
@@ -31,9 +30,29 @@
                 <img class="ui small demo circular image centered" src="images/avatar/large/elliot.jpg" id="animate2"><br>
             </div>
             <div class="ui secondary segment center aligned">
-              <div class="ui secondary pointing menu compact">
-                <a class="item active blue" href="/stream">Stream</a>
-                <a class="item" href="./followers.html">Followers</a>
+              <div class="ui mini statistic">
+                <div class="label">
+                  Chirps
+                </div>
+                <div class="value">
+                  <a href="#">34</a>
+                </div>
+              </div>
+              <div class="ui mini statistic">
+                <div class="label">
+                  Likes
+                </div>
+                <div class="value">
+                  <a href="#">165</a>
+                </div>
+              </div>
+              <div class="ui mini statistic">
+                <div class="label">
+                  ReChirp
+                </div>
+                <div class="value">
+                  <a href="#">5</a>
+                </div>
               </div>
             </div>
           </div>
@@ -475,23 +494,19 @@
     </div>
 
     <script type="text/javascript">
-    $('#example1').progress();
     $('#animate').transition({
      debug     : true,
      animation : 'fade in',
      duration  : 3000
     });
-    $('#animate2').transition({
-     debug     : true,
-     animation : 'fade in',
-     duration  : 3000
-    });
+
 
     $(document).ready(function() {
 
-      $(window).on( "load", function() {
-        $('#example1').removeClass('progress');
-      });
+
+
+
+
       $('.ui.sticky').sticky({ offset: 50});
       // $('.popup-hover.segment')
       //   .popup({
@@ -503,7 +518,10 @@
       $('#chirp-modal').on('click', function() {
         $('.ui.modal').modal('setting', 'transition', 'scale').modal('show');
       });
+
     });
+
+
 
     </script>
   </body>

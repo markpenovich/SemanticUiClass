@@ -10,19 +10,17 @@
   </head>
   <body>
 
-    <div class="ui blue progress" data-percent="99" id="example1">
-      <div class="bar"></div>
-    </div>
-
     <!-- a wrapper to give our content margin and animate -->
-    <div class="ui text container blue segment" style="margin-top: 3em;" id="animate">
+    <div class="ui text container segment" style="margin-top: 3em;" id="animate">
 
-      <!-- <div class="ui pointing fixed menu">
+      <div class="ui fixed menu">
         <div class="ui text container">
-          <a class="item" href="./index.html">Stream</a>
-          <a class="item active blue " href="./followers.html">Followers</a>
+          <div class="ui secondary pointing menu">
+            <a class="item" href="./index.html">Chirps</a>
+            <a class="item active blue" href="./followers.html">Followers</a>
+          </div>
         </div>
-      </div> -->
+      </div>
 
       <!-- left dividng column (rail)-->
       <div class="ui left rail">
@@ -320,16 +318,12 @@
     </div>
 
     <script type="text/javascript">
-    $('#example1').progress();
     $('#animate').transition({
      debug     : true,
      animation : 'fade in',
      duration  : 3000
     });
     $(document).ready(function() {
-      $(window).on( "load", function() {
-        $('#example1').removeClass('progress');
-      });
 
 
       $('.ui.sticky').sticky({ offset: 50});
