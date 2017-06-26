@@ -11,14 +11,16 @@
   <body>
 
     <!-- a wrapper to give our content margin and animate -->
-    <div class="ui text container segment" style="margin-top: 3em;" id="animate">
+    <div class="ui text container segment" style="margin-top: 4em;" id="animate">
 
       <div class="ui fixed menu">
         <div class="ui text container">
           <div class="ui secondary pointing menu">
-            <a class="item" href="./index.html">Chirps</a>
+            <a class="item" href="./index.html">Home</a>
             <a class="item active blue" href="./followers.html">Followers</a>
+            <a class="item" href="./followers.html">Trends</a>
           </div>
+          <a class="ui borderless right item">Profile<i class="dropdown icon"></i></a>
         </div>
       </div>
 
@@ -76,7 +78,7 @@
         </div>
       </div>
 
-      <!-- right dividing column (rail) -->
+      <!-- Right dividing column (rail) -->
       <div class="ui right rail">
         <div class="ui segment">
           <h3 class="ui dividing header">Trends</h3>
@@ -323,10 +325,11 @@
      animation : 'fade in',
      duration  : 3000
     });
+    $('.ui.sticky').sticky({ offset: 50});
     $(document).ready(function() {
 
 
-      $('.ui.sticky').sticky({ offset: 50});
+
       // $('.popup-hover.segment')
       //   .popup({
       //     position : 'right center',
