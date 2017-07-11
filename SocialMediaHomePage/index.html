@@ -157,7 +157,7 @@
       <div class="ui divider"></div>
       <h3 class="ui centered header">Chirp Stream</h3>
 
-      <div class="ui comments">
+      <div class="ui test comments">
         <div class="ui vertical segment feed" id="chirp-modal">
           <div class="comment">
             <a class="avatar">
@@ -484,6 +484,9 @@
         </form>
       </div>
     </div>
+    <div class="ui test button">
+      heyyyyy
+    </div>
 
     <script type="text/javascript">
     $('#animate').transition({
@@ -495,6 +498,14 @@
     $('#chirp-modal').on('click', function() {
       $('.ui.modal').modal('setting', 'transition', 'scale').modal('show');
     });
+    $('.test.comments')
+      .popup({
+        position : 'right center',
+        target   : '.test.button',
+        title    : 'My favorite dog',
+        content  : 'My favorite dog would like other dogs as much as themselves'
+      })
+    ;
 
     </script>
   </body>
